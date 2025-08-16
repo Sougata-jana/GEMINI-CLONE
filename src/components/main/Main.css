@@ -154,3 +154,54 @@ gap:10px;
     font-weight: 300;
     line-height:1.8 ;
 }
+
+/* Responsive adjustments to keep input bar at bottom on small screens */
+@media (max-width: 700px){
+    .main{
+        display:flex;
+        flex-direction:column;
+    }
+    .main .main-container{
+        flex:1; /* take available vertical space */
+        display:flex;
+        flex-direction:column;
+    }
+    .result{
+        flex:1;
+        max-height:none; /* allow full height, flex handles scroll */
+        overflow-y:auto;
+        padding-bottom:90px; /* space for input bar */
+    }
+    .main-bottom{
+        position:sticky; /* stick to viewport bottom while scrolling main */
+        bottom:0;
+        margin-top:auto;
+        background:#ffffff;
+        padding:8px 16px 20px;
+        box-shadow:0 -4px 12px rgba(0,0,0,0.06);
+        backdrop-filter:blur(6px);
+    }
+    .search{
+        gap:12px;
+    }
+    .main  .greet{
+        font-size:40px;
+        margin:30px 0 10px;
+    }
+}
+
+@media(max-width:400px){
+    .main-bottom input{
+        flex:none;
+        width:150px ;
+    }
+    .main-bottom img{
+        width: 20px;
+    }
+    .search{
+        padding: 5px 10px;
+    }
+    .search div{
+        gap:5px
+    }
+}
