@@ -1,9 +1,9 @@
 import React, { useContext } from 'react'
 import './Main.css'
 import { assets } from '../../assets/assets'
-import { Context } from '../../context/Context'
+import { Context } from '../../context/Context.jsx'
 function Main() {
-    const {onSent,isLoading,showResult,recentPrompt,resultData,input,setInput}= useContext(Context)
+    const {onSent,isLoading,showResult,recentPrompt,resultData,input,setInput,}= useContext(Context)
   return (
         <div className="main">
             <div className="nav">
